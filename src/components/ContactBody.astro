@@ -1,0 +1,40 @@
+---
+import { getLangFromUrl, useTranslations } from '@/i18n/ui';
+import { site } from '@/config';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const socials = [
+  { name: 'YouTube', href: site.social.youtube },
+  { name: 'Facebook', href: site.social.facebook },
+  { name: 'GitHub', href: site.social.github },
+  { name: 'X', href: site.social.x },
+];
+---
+<section class="section container">
+  <div class="section-head">
+    <div class="eyebrow">{t('nav.contact')}</div>
+    <h2>{t('contact.title')}</h2>
+    <p>{t('contact.subtitle')}</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="card">
+      <h3>{t('contact.email')}</h3>
+      <p><a class="link-arrow" href={`mailto:${site.email}`}>{site.email}</a></p>
+    </div>
+    <div class="card">
+      <h3>{t('contact.social')}</h3>
+      <div class="social-list">
+        {socials.map((s) => (
+          <a href={s.href} target="_blank" rel="noopener">{s.name}</a>
+        ))}
+      </div>
+    </div>
+    <div class="card" style="grid-column:1/-1;">
+      <h3>{t('contact.book')}</h3>
+      {site.calendly
+        ? <p><a class="link-arrow" href={site.calendly} target="_blank" rel="noopener">{t('contact.book')} →</a></p>
+        : <p>{t('contact.bookSoon')}</p>}
+    </div>
+  </div>
+</section>

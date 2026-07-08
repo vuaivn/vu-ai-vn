@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '@/i18n/ui';
+import { formatDate } from '@/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const base = lang === 'en' ? '/en' : '';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const tiles = [
+  { ico: '📝', label: t('nav.blog'), href: `${base}/blog` },
+  { ico: '🛠️', label: t('nav.tools'), href: `${base}/tools` },
+  { ico: '🚀', label: lang === 'en' ? 'Projects' : 'Dự án', href: `${base}/tools#projects` },
+  { ico: '✉️', label: t('nav.contact'), href: `${base}/contact` },
+];
+---
+<section class="hero container">
+  <h1><span class="grad-text">Vũ AI</span></h1>
+  <div class="tagline">{t('hero.tagline')}</div>
+  <p class="intro">{t('hero.intro')}</p>
+  <div class="cta">
+    <a class="btn" href={`${base}/contact`}>{t('hero.cta')} →</a>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="section-head">
+    <div class="eyebrow">{t('home.explore')}</div>
+  </div>
+  <div class="tiles">
+    {tiles.map((tile) => (
+      <a class="tile" href={tile.href}>
+        <div class="ico">{tile.ico}</div>
+        <div class="t">{tile.label}</div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<section class="section container">
+  <div class="section-head" style="display:flex;justify-content:space-between;align-items:end;">
+    <h2>{t('home.latest')}</h2>
+    <a class="link-arrow" href={`${base}/blog`}>{t('home.viewAll')} →</a>
+  </div>
+  <div>
+    {posts.map((post) => (
+      <a class="post-item" href={`${base}/blog/${post.slug}`}>
+        <div>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.description}</p>
+        </div>
+        <div class="date">{formatDate(post.data.pubDate, lang)}</div>
+      </a>
+    ))}
+  </div>
+</section>

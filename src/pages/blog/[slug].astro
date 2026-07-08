@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { categories as cats } from '@/config';
+import { formatDate, readingTime } from '@/utils';
+import { useTranslations } from '@/i18n/ui';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+const { post } = Astro.props;
+const { Content } = await post.render();
+const lang = post.data.lang;
+const t = useTranslations(lang);
+const catName = cats[lang].find((c) => c.slug === post.data.category)?.name ?? post.data.category;
+const mins = readingTime(post.body);
+---
+<BaseLayout title={post.data.title} description={post.data.description} type="article">
+  <article class="article container">
+    <div class="meta" style="color:var(--accent2);font-size:0.85rem;">{catName}</div>
+    <h1>{post.data.title}</h1>
+    <div class="article-meta">
+      {formatDate(post.data.pubDate, lang)} · {mins} {t('blog.readingTime')}
+    </div>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

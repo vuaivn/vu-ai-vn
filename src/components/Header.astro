@@ -1,0 +1,34 @@
+---
+import { getLangFromUrl, useTranslations, localizedPath } from '@/i18n/ui';
+import { site } from '@/config';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const path = Astro.url.pathname;
+const base = lang === 'en' ? '/en' : '';
+const other = lang === 'en' ? 'vi' : 'en';
+const otherPath = localizedPath(path, other);
+
+const links = [
+  { href: `${base}/`, label: t('nav.home'), key: 'home' },
+  { href: `${base}/blog`, label: t('nav.blog'), key: 'blog' },
+  { href: `${base}/tools`, label: t('nav.tools'), key: 'tools' },
+  { href: `${base}/contact`, label: t('nav.contact'), key: 'contact' },
+];
+function isActive(href: string) {
+  const clean = href.replace(/\/$/, '');
+  const cur = path.replace(/\/$/, '');
+  if (clean === base || clean === '') return cur === base || cur === '';
+  return cur.startsWith(clean);
+}
+---
+<header class="site-header">
+  <div class="container nav">
+    <a href={`${base}/`} class="brand">{site.name}<span class="dot">.ai.vn</span></a>
+    <nav class="nav-links">
+      {links.map((l) => (
+        <a href={l.href} class={isActive(l.href) ? 'active' : ''}>{l.label}</a>
+      ))}
+      <a class="lang-switch" href={otherPath}>{other.toUpperCase()}</a>
+    </nav>
+  </div>
+</header>
