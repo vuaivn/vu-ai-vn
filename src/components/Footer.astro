@@ -8,6 +8,10 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>© {year} {site.name} — {t('footer.rights')}</div>
+    <div class="footer-network">
+      <span>{lang === 'en' ? 'Other site:' : 'Website khác:'}</span>
+      <a href="https://nguyenngocvu.com" target="_blank" rel="me noopener">nguyenngocvu.com</a>
+    </div>
     <div>{t('footer.built')}</div>
   </div>
 </footer>
