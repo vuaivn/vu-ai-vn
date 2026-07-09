@@ -2,9 +2,22 @@
 title: 'Git và GitHub cơ bản: Hướng dẫn quản lý mã nguồn cho người mới'
 description: 'Học Git và GitHub cơ bản: các lệnh thiết yếu, quy trình làm việc và cách quản lý mã nguồn hiệu quả cho lập trình viên mới bắt đầu.'
 pubDate: 2026-06-09
+updatedDate: 2026-07-09
 category: 'cong-nghe'
 lang: 'vi'
+cover: '/images/posts/hero-git-github.webp'
+faq:
+  - q: 'Tôi có thể học Git mà không cần GitHub không?'
+    a: 'Có. Git chạy độc lập trên máy bạn. Nhưng GitHub giúp lưu trữ, sao lưu và cộng tác nên rất nên dùng kèm.'
+  - q: 'Commit thường xuyên có tốt không?'
+    a: 'Có. Nên commit nhỏ, thường xuyên với thông điệp rõ ràng để dễ theo dõi và quay lui khi cần.'
+  - q: 'Nếu lỡ commit sai thì sao?'
+    a: 'Git cho phép sửa hoặc hoàn tác. Bạn có thể dùng git revert hoặc git reset để khôi phục trạng thái trước đó.'
+  - q: 'GitHub có miễn phí không?'
+    a: 'Có. GitHub cung cấp repo công khai và riêng tư miễn phí, đủ cho hầu hết nhu cầu cá nhân và nhóm nhỏ.'
 ---
+
+**Tóm tắt nhanh:** **Git** là hệ thống quản lý phiên bản chạy trên máy bạn, theo dõi mọi thay đổi mã nguồn; **GitHub** là nơi lưu trữ code trên đám mây và cộng tác nhóm. Nắm vài lệnh cốt lõi (add, commit, push, pull) và khái niệm nhánh + Pull Request là đủ để bắt đầu lập trình chuyên nghiệp.
 
 **Git** là hệ thống quản lý phiên bản giúp bạn theo dõi mọi thay đổi trong mã nguồn, còn **GitHub** là nền tảng lưu trữ code trên đám mây và cộng tác nhóm. Nắm vững Git và GitHub là kỹ năng bắt buộc cho bất kỳ ai muốn lập trình chuyên nghiệp.
 
@@ -18,6 +31,8 @@ Nhiều người nhầm lẫn hai khái niệm này. Git là công cụ chạy t
 - **Quay lui an toàn:** khôi phục phiên bản cũ khi có lỗi.
 - **Cộng tác:** nhiều người làm chung mà không đè code lên nhau.
 - **Sao lưu:** code luôn an toàn trên đám mây.
+
+![Minh họa quy trình Git: commit, push, pull, merge với các nhánh](/images/posts/in-git-github.webp)
 
 ## Các lệnh Git cơ bản cần biết
 
@@ -54,6 +69,14 @@ git merge tinh-nang-moi      # gộp về nhánh chính
 ### Pull Request là gì?
 
 Trên GitHub, Pull Request (PR) là cách bạn đề xuất gộp thay đổi từ nhánh của mình vào nhánh chính. PR cho phép người khác review, thảo luận và duyệt code trước khi hợp nhất — nền tảng của cộng tác nhóm.
+
+## Những điều cốt lõi
+
+- **Git** = công cụ quản lý phiên bản trên máy; **GitHub** = nơi lưu trữ + cộng tác.
+- Vòng lặp hằng ngày: **add → commit → push**; kéo bản mới bằng **pull**.
+- **Nhánh (branch)** cho phép làm tính năng mới không đụng code chính.
+- **Pull Request** là nền tảng cộng tác: review, thảo luận, duyệt trước khi merge.
+- Commit **nhỏ, thường xuyên**, thông điệp rõ ràng để dễ quay lui.
 
 ## Câu hỏi thường gặp (FAQ)
 

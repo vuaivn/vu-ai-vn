@@ -20,6 +20,25 @@ const canonical = new URL(`/blog/${post.slug}`, site.url).href;
 const pub = post.data.pubDate.toISOString();
 const upd = (post.data.updatedDate ?? post.data.pubDate).toISOString();
 
+// Gợi ý bài cùng category + cùng ngôn ngữ (loại bài hiện tại), tối đa 3.
+const allPosts = await getCollection('blog');
+const related = allPosts
+  .filter((p) => p.data.category === post.data.category && p.data.lang === lang && p.slug !== post.slug)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+// Link share mạng xã hội.
+const shareText = encodeURIComponent(post.data.title);
+const shareUrl = encodeURIComponent(canonical);
+const share = {
+  facebook: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+  x: `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`,
+  telegram: `https://t.me/share/url?url=${shareUrl}&text=${shareText}`,
+  linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,
+};
+const relatedLabel = lang === 'en' ? 'Related articles' : 'Bài viết cùng chủ đề';
+const shareLabel = lang === 'en' ? 'Share:' : 'Chia sẻ bài viết:';
+
 const jsonLd: any[] = [
   {
     '@context': 'https://schema.org',
@@ -77,8 +96,62 @@ if (post.data.faq?.length) {
     <div class="prose">
       <Content />
     </div>
+
+    <div class="share">
+      <span class="share-label">{shareLabel}</span>
+      <a class="share-btn" href={share.facebook} target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+      <a class="share-btn" href={share.x} target="_blank" rel="noopener" aria-label="X">X</a>
+      <a class="share-btn" href={share.telegram} target="_blank" rel="noopener" aria-label="Telegram">Telegram</a>
+      <a class="share-btn" href={share.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+
+    {related.length > 0 && (
+      <section class="related">
+        <h2>{relatedLabel}</h2>
+        <div class="related-grid">
+          {related.map((p) => (
+            <a class="related-card" href={`/blog/${p.slug}`}>
+              {p.data.cover && (
+                <img src={p.data.cover} alt={p.data.title} width="400" height="225" loading="lazy" />
+              )}
+              <div class="related-body">
+                <span class="related-cat">{cats[lang].find((c) => c.slug === p.data.category)?.name ?? p.data.category}</span>
+                <h3>{p.data.title}</h3>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </article>
   {jsonLd.map((obj) => (
     <script type="application/ld+json" set:html={JSON.stringify(obj)} />
   ))}
 </BaseLayout>
+
+<style>
+  .share {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 10px;
+    margin: 2rem 0; padding: 1rem 0;
+    border-top: 1px solid var(--border, #2a2a2a); border-bottom: 1px solid var(--border, #2a2a2a);
+  }
+  .share-label { font-weight: 600; opacity: 0.8; }
+  .share-btn {
+    display: inline-block; padding: 6px 14px; border-radius: 999px;
+    font-size: 0.9rem; font-weight: 600;
+    border: 1.5px solid var(--accent, #7cc); color: var(--accent, #7cc); transition: all 0.2s;
+  }
+  .share-btn:hover { background: var(--accent, #7cc); color: #fff; transform: translateY(-2px); }
+  .related { margin-top: 3rem; }
+  .related h2 { margin-bottom: 1.2rem; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+  .related-card {
+    display: block; border: 1px solid var(--border, #2a2a2a); border-radius: 12px; overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+  .related-card img { width: 100%; height: auto; display: block; }
+  .related-body { padding: 0.9rem 1rem 1.1rem; }
+  .related-cat { font-size: 0.8rem; color: var(--accent2, var(--accent, #7cc)); font-weight: 600; }
+  .related-body h3 { font-size: 1rem; margin: 0.3rem 0 0; line-height: 1.4; }
+</style>

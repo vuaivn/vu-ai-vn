@@ -2,9 +2,22 @@
 title: 'LLM hoạt động thế nào? Giải thích mô hình ngôn ngữ lớn dễ hiểu'
 description: 'Giải thích cách LLM (mô hình ngôn ngữ lớn) hoạt động: token, tham số, huấn luyện và dự đoán từ tiếp theo — dễ hiểu cho người mới.'
 pubDate: 2026-05-18
+updatedDate: 2026-07-09
 category: 'cong-nghe'
 lang: 'vi'
+cover: '/images/posts/hero-llm.webp'
+faq:
+  - q: 'LLM có "hiểu" ngôn ngữ như con người không?'
+    a: 'Không theo nghĩa nhận thức. Nó học quy luật thống kê rất tinh vi, nhưng không có ý thức hay hiểu biết thật sự.'
+  - q: 'Token và từ có giống nhau không?'
+    a: 'Không hẳn. Một từ có thể gồm nhiều token, đặc biệt với tiếng Việt có dấu. Token là đơn vị mô hình xử lý.'
+  - q: 'Mô hình càng lớn càng tốt phải không?'
+    a: 'Không luôn đúng. Kích thước quan trọng, nhưng dữ liệu huấn luyện, kiến trúc và tinh chỉnh cũng quyết định chất lượng.'
+  - q: 'Vì sao cùng câu hỏi mà LLM trả lời khác nhau?'
+    a: 'Vì mô hình sinh văn bản có yếu tố ngẫu nhiên (nhiệt độ - temperature) để tạo sự đa dạng trong câu trả lời.'
 ---
+
+**Tóm tắt nhanh:** **LLM (mô hình ngôn ngữ lớn)** được huấn luyện trên lượng văn bản khổng lồ để **dự đoán token tiếp theo** trong một chuỗi. Chính khả năng này — khi mở rộng lên hàng tỷ tham số — tạo nên năng lực viết, dịch, tóm tắt của GPT hay Claude. Hiểu cơ chế này giúp bạn viết prompt tốt hơn và biết vì sao cần kiểm chứng.
 
 **LLM (Large Language Model)** là mô hình AI được huấn luyện trên lượng văn bản khổng lồ để dự đoán từ (token) tiếp theo trong một chuỗi. Nghe đơn giản, nhưng chính khả năng dự đoán này — khi mở rộng lên hàng tỷ tham số — tạo nên năng lực viết, dịch, tóm tắt và suy luận đáng kinh ngạc của các mô hình như GPT hay Claude.
 
@@ -15,6 +28,8 @@ LLM là một mạng nơ-ron rất lớn, học các quy luật thống kê củ
 ### Token — đơn vị cơ bản của LLM
 
 LLM không đọc từng chữ cái mà xử lý **token** — các mảnh từ. Ví dụ "công nghệ" có thể được tách thành vài token. Mô hình chuyển token thành các con số (vector) để tính toán. Số lượng token cũng là cơ sở để tính chi phí khi dùng API.
+
+![Minh họa cách LLM dự đoán token tiếp theo qua các lớp mạng nơ-ron](/images/posts/in-llm.webp)
 
 ## LLM được huấn luyện như thế nào?
 
@@ -41,6 +56,14 @@ Hiểu cơ chế giúp bạn dùng LLM khôn ngoan hơn:
 - Cung cấp ngữ cảnh và ví dụ rõ ràng.
 - Kết hợp RAG khi cần dữ liệu cập nhật hoặc riêng tư.
 - Luôn kiểm chứng thông tin quan trọng.
+
+## Những điều cốt lõi
+
+- LLM về bản chất **dự đoán token tiếp theo** dựa trên quy luật thống kê của ngôn ngữ.
+- **Token** là đơn vị xử lý (mảnh từ), cũng là cơ sở tính chi phí API.
+- Huấn luyện gồm **pre-training → fine-tuning → RLHF**.
+- **Ảo giác** xảy ra vì mô hình đoán từ hợp lý, không tra cứu sự thật.
+- Dùng hiệu quả: cho **ngữ cảnh rõ**, kết hợp **RAG**, luôn **kiểm chứng**.
 
 ## Câu hỏi thường gặp (FAQ)
 
