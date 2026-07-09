@@ -9,7 +9,7 @@ const base = lang === 'en' ? '/en' : '';
 const posts = (await getCollection('blog'))
   .filter((p) => !p.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 3);
+  .slice(0, 10);
 
 const tiles = [
   { ico: '📝', label: t('nav.blog'), href: `${base}/blog` },
@@ -46,15 +46,40 @@ const tiles = [
     <h2>{t('home.latest')}</h2>
     <a class="link-arrow" href={`${base}/blog`}>{t('home.viewAll')} →</a>
   </div>
-  <div>
+  <div class="post-cards">
     {posts.map((post) => (
-      <a class="post-item" href={`${base}/blog/${post.slug}`}>
-        <div>
+      <a class="post-card" href={`${base}/blog/${post.slug}`}>
+        {post.data.cover && (
+          <img class="post-card-img" src={post.data.cover} alt={post.data.title} width="400" height="225" loading="lazy" />
+        )}
+        <div class="post-card-body">
           <h3>{post.data.title}</h3>
           <p>{post.data.description}</p>
+          <div class="date">{formatDate(post.data.pubDate, lang)}</div>
         </div>
-        <div class="date">{formatDate(post.data.pubDate, lang)}</div>
       </a>
     ))}
   </div>
 </section>
+
+<style>
+  .post-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.4rem;
+  }
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border, #2a2a2a);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .post-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.18); }
+  .post-card-img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; display: block; }
+  .post-card-body { padding: 1rem 1.1rem 1.2rem; }
+  .post-card-body h3 { font-size: 1.05rem; margin: 0 0 0.4rem; line-height: 1.4; }
+  .post-card-body p { font-size: 0.9rem; opacity: 0.8; margin: 0 0 0.7rem; }
+  .post-card-body .date { font-size: 0.8rem; opacity: 0.6; }
+</style>
