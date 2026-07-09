@@ -2,8 +2,19 @@
 title: 'Review GitHub Copilot: trợ lý code AI có còn đáng dùng?'
 description: 'Đánh giá GitHub Copilot 2026: chất lượng gợi ý code, giá, tích hợp và so sánh với Cursor. Copilot có còn là lựa chọn số một cho lập trình viên?'
 pubDate: 2026-05-12
+updatedDate: 2026-07-09
 category: 'review'
 lang: 'vi'
+cover: '/images/posts/hero-copilot.webp'
+faq:
+  - q: 'GitHub Copilot có miễn phí không?'
+    a: 'Miễn phí cho sinh viên và một số dự án mã nguồn mở; còn lại là thuê bao trả phí.'
+  - q: 'Copilot dùng được với editor nào?'
+    a: 'VS Code, JetBrains, Neovim, Visual Studio và nhiều editor khác.'
+  - q: 'Copilot hay Cursor tốt hơn?'
+    a: 'Copilot thắng về tích hợp và ổn định; Cursor thắng về hiểu ngữ cảnh dự án.'
+  - q: 'Code của tôi có bị lưu lại không?'
+    a: 'GitHub có chính sách về dữ liệu; bản doanh nghiệp cho phép kiểm soát chặt hơn.'
 ---
 
 **TL;DR:** GitHub Copilot vẫn là trợ lý code AI ổn định và dễ dùng nhất cho số đông (8.5/10). Tích hợp sâu với GitHub và mọi editor phổ biến là điểm mạnh, nhưng đã bị các đối thủ như Cursor vượt ở khả năng hiểu toàn dự án.
@@ -13,6 +24,8 @@ lang: 'vi'
 GitHub Copilot là "người tiên phong" của làn sóng AI viết code. Được hậu thuẫn bởi GitHub và Microsoft, Copilot hoạt động như một plugin gợi ý code thời gian thực, kèm chat và các tính năng agent ngày càng mở rộng.
 
 Sau nhiều năm dùng Copilot song song với các công cụ mới, tôi đánh giá lại xem nó còn giữ vị thế đến đâu.
+
+![Minh họa GitHub Copilot gợi ý code trong editor](/images/posts/in-copilot.webp)
 
 ## Ưu điểm
 
@@ -43,6 +56,14 @@ Sau nhiều năm dùng Copilot song song với các công cụ mới, tôi đán
 
 - **Rất hợp** với lập trình viên muốn một trợ lý ổn định, tích hợp sẵn trong editor quen thuộc mà không đổi công cụ.
 - **Nên cân nhắc thêm** nếu bạn cần AI hiểu sâu toàn bộ codebase — khi đó Cursor có lợi thế.
+
+## Những điều cốt lõi
+
+- Copilot là **người tiên phong** AI viết code, hậu thuẫn bởi GitHub + Microsoft.
+- Mạnh: **tích hợp rộng mọi editor, gợi ý mượt, Copilot Chat, ổn định**.
+- Điểm trừ: **ngữ cảnh dự án hạn chế hơn Cursor**, chi phí, quyền riêng tư.
+- Rất hợp người muốn **trợ lý ổn định trong editor quen thuộc**.
+- Đánh giá tổng: **8.5/10** — lựa chọn an toàn, dễ bắt đầu nhất.
 
 ## Câu hỏi thường gặp (FAQ)
 

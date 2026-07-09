@@ -2,9 +2,22 @@
 title: 'Xây website bằng Astro: Hướng dẫn cho người mới bắt đầu'
 description: 'Học cách xây website nhanh bằng Astro framework: ưu điểm, cấu trúc dự án và các bước tạo trang web tĩnh tối ưu tốc độ và SEO.'
 pubDate: 2026-05-29
+updatedDate: 2026-07-09
 category: 'cong-nghe'
 lang: 'vi'
+cover: '/images/posts/hero-xay-web-astro.webp'
+faq:
+  - q: 'Astro có cần biết React không?'
+    a: 'Không bắt buộc. Bạn có thể dùng cú pháp Astro thuần. React chỉ cần khi muốn thành phần tương tác phức tạp.'
+  - q: 'Astro phù hợp với loại web nào?'
+    a: 'Rất hợp cho blog, trang tài liệu, landing page, portfolio — những site nặng nội dung, cần tốc độ và SEO.'
+  - q: 'Astro có làm được web động không?'
+    a: 'Có. Astro hỗ trợ server-side rendering và API routes, dù thế mạnh chính vẫn là nội dung tĩnh.'
+  - q: 'Deploy web Astro ở đâu?'
+    a: 'Bạn có thể deploy miễn phí lên Cloudflare Pages, Netlify hay Vercel một cách dễ dàng.'
 ---
+
+**Tóm tắt nhanh:** Astro là web framework hiện đại xây **website tĩnh siêu nhanh, tối ưu SEO**, gửi ít JavaScript nhất tới trình duyệt nhờ Islands Architecture. Chỉ với vài lệnh (`npm create astro@latest`), bạn có ngay website chuyên nghiệp. Lý tưởng cho blog, portfolio, trang tài liệu.
 
 **Astro** là một web framework hiện đại giúp xây website tĩnh siêu nhanh, tối ưu SEO và gửi ít JavaScript nhất có thể tới trình duyệt. Nếu bạn muốn làm blog, trang giới thiệu hay tài liệu với tốc độ tải cực nhanh, Astro là lựa chọn đáng cân nhắc hàng đầu năm 2026.
 
@@ -18,6 +31,8 @@ Astro sinh ra HTML tĩnh tại thời điểm build, chỉ "hydrate" (nạp Java
 - **Thân thiện SEO:** HTML tĩnh, dễ cho công cụ tìm kiếm lập chỉ mục.
 - **Đa framework:** dùng React, Vue, Svelte trong cùng dự án.
 - **Content Collections:** quản lý blog, markdown có kiểm tra kiểu dữ liệu.
+
+![Minh họa xây website bằng Astro từ các component và content collections](/images/posts/in-xay-web-astro.webp)
 
 ## Cấu trúc một dự án Astro cơ bản
 
@@ -61,6 +76,14 @@ const ten = "Vũ AI";
 ```
 
 Cú pháp gần với HTML nên rất dễ tiếp cận cho người mới.
+
+## Những điều cốt lõi
+
+- Astro sinh **HTML tĩnh lúc build**, chỉ hydrate phần cần tương tác (Islands Architecture).
+- Ưu điểm: **tốc độ cực nhanh, thân thiện SEO, đa framework, Content Collections**.
+- Cấu trúc: **pages (route), components, content, layouts, public**.
+- Bắt đầu: `npm create astro@latest` → `npm run dev` → thêm trang → build.
+- **Content Collections** kiểm tra kiểu frontmatter, tránh lỗi trước khi xuất bản.
 
 ## Câu hỏi thường gặp (FAQ)
 

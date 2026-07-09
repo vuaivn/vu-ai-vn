@@ -2,8 +2,19 @@
 title: 'Review Cursor IDE: trình soạn code AI đáng dùng nhất?'
 description: 'Đánh giá Cursor IDE chi tiết: tính năng AI, tốc độ, giá cả và so sánh với VS Code. Liệu Cursor có xứng đáng thay thế editor quen thuộc của bạn năm 2026?'
 pubDate: 2026-05-08
+updatedDate: 2026-07-09
 category: 'review'
 lang: 'vi'
+cover: '/images/posts/hero-cursor.webp'
+faq:
+  - q: 'Cursor có miễn phí không?'
+    a: 'Có bản miễn phí giới hạn; muốn dùng model mạnh và không giới hạn cần bản trả phí.'
+  - q: 'Cursor khác gì VS Code?'
+    a: 'Cursor tích hợp AI ở tầng lõi, hiểu toàn bộ codebase; VS Code cần plugin để có AI.'
+  - q: 'Cursor dùng được extension của VS Code không?'
+    a: 'Gần như tất cả, vì Cursor là fork của VS Code.'
+  - q: 'Có an toàn cho code doanh nghiệp không?'
+    a: 'Có chế độ privacy, nhưng dự án cực nhạy cảm nên đánh giá kỹ chính sách dữ liệu.'
 ---
 
 **TL;DR:** Cursor là IDE tích hợp AI mạnh nhất hiện nay (9/10). Nếu bạn code hằng ngày và muốn AI hiểu toàn bộ dự án, Cursor đáng đầu tư. Điểm trừ là giá thuê bao và phụ thuộc vào kết nối mạng.
@@ -13,6 +24,8 @@ lang: 'vi'
 Cursor là một fork của VS Code được xây dựng quanh AI. Thay vì gắn AI như một plugin phụ, Cursor đặt AI vào trung tâm trải nghiệm: chat với codebase, chỉnh sửa nhiều file, tự động hoàn thành thông minh theo ngữ cảnh dự án.
 
 Tôi đã chuyển từ VS Code thuần sang Cursor và dùng cho các dự án web thực tế. Đây là đánh giá khách quan.
+
+![Minh họa Cursor IDE tích hợp AI hỗ trợ lập trình](/images/posts/in-cursor.webp)
 
 ## Ưu điểm
 
@@ -43,6 +56,14 @@ Tôi đã chuyển từ VS Code thuần sang Cursor và dùng cho các dự án 
 
 - **Rất hợp** với developer chuyên nghiệp làm dự án vừa và lớn, muốn AI hiểu cả hệ thống.
 - **Cân nhắc** nếu bạn code ít, ngân sách hạn chế, hoặc làm việc với code cực nhạy cảm.
+
+## Những điều cốt lõi
+
+- Cursor là **fork VS Code đặt AI vào trung tâm** — chat codebase, sửa đa file.
+- Điểm mạnh: **hiểu toàn dự án, tab autocomplete thông minh, Composer/Agent mode**.
+- Điểm trừ: **chi phí thuê bao, phụ thuộc mạng, ngốn tài nguyên, quyền riêng tư code**.
+- Rất hợp **developer chuyên nghiệp** dự án vừa/lớn; code ít thì VS Code + Copilot tiết kiệm hơn.
+- Đánh giá tổng: **9/10**.
 
 ## Câu hỏi thường gặp (FAQ)
 

@@ -2,8 +2,19 @@
 title: 'Review Perplexity AI: công cụ tìm kiếm AI thay thế Google?'
 description: 'Đánh giá Perplexity AI chi tiết: độ chính xác, trích dẫn nguồn, tốc độ và giá. Liệu công cụ tìm kiếm AI này có thể thay thế Google năm 2026?'
 pubDate: 2026-05-25
+updatedDate: 2026-07-09
 category: 'review'
 lang: 'vi'
+cover: '/images/posts/hero-perplexity.webp'
+faq:
+  - q: 'Perplexity có miễn phí không?'
+    a: 'Có bản miễn phí đủ dùng; bản Pro mở khóa model mạnh hơn và nhiều lượt hơn.'
+  - q: 'Perplexity có thay được Google không?'
+    a: 'Thay tốt cho nghiên cứu; chưa thay được cho tra cứu nhanh và điều hướng.'
+  - q: 'Câu trả lời của Perplexity có đáng tin không?'
+    a: 'Đáng tin hơn nhờ trích nguồn, nhưng vẫn nên kiểm chứng với chủ đề quan trọng.'
+  - q: 'Perplexity dùng model AI nào?'
+    a: 'Cho chọn nhiều model khác nhau ở bản Pro tùy nhu cầu.'
 ---
 
 **TL;DR:** Perplexity AI là công cụ tìm kiếm hội thoại tốt nhất hiện nay nhờ trả lời trực tiếp kèm trích dẫn nguồn (8.5/10). Thay thế Google cho việc *nghiên cứu*, nhưng chưa thay được Google cho việc *dò tìm* nhanh và điều hướng.
@@ -13,6 +24,8 @@ lang: 'vi'
 Perplexity AI kết hợp mô hình ngôn ngữ lớn với tìm kiếm web thời gian thực. Thay vì trả về danh sách link như Google, Perplexity đưa ra câu trả lời tổng hợp kèm trích dẫn nguồn rõ ràng — điểm cực mạnh cho việc nghiên cứu và kiểm chứng.
 
 Tôi dùng Perplexity thay Google cho nhiều truy vấn nghiên cứu trong vài tháng. Đây là đánh giá.
+
+![Minh họa Perplexity AI - công cụ tìm kiếm trả lời kèm trích dẫn nguồn](/images/posts/in-perplexity.webp)
 
 ## Ưu điểm
 
@@ -43,6 +56,14 @@ Tôi dùng Perplexity thay Google cho nhiều truy vấn nghiên cứu trong và
 
 - **Rất hợp** với người làm nghiên cứu, viết bài, cần câu trả lời có nguồn để kiểm chứng.
 - **Vẫn cần Google** cho tra cứu nhanh, điều hướng và tác vụ đời thường.
+
+## Những điều cốt lõi
+
+- Perplexity kết hợp **LLM + tìm kiếm web thời gian thực**, trả lời kèm trích dẫn.
+- Mạnh: **trả lời trực tiếp, trích nguồn kiểm chứng, cập nhật mới, chế độ Focus/Copilot**.
+- Điểm trừ: **không thay điều hướng nhanh, đôi khi nông, phụ thuộc chất lượng nguồn**.
+- Rất hợp **nghiên cứu, viết bài**; tra cứu nhanh vẫn cần Google.
+- Đánh giá tổng: **8.5/10** — dùng song song Google là tối ưu.
 
 ## Câu hỏi thường gặp (FAQ)
 

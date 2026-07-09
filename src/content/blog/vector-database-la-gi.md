@@ -2,9 +2,22 @@
 title: 'Vector Database là gì? Nền tảng của tìm kiếm ngữ nghĩa và AI'
 description: 'Tìm hiểu vector database là gì, cách nó lưu trữ embedding và hỗ trợ tìm kiếm ngữ nghĩa cho các ứng dụng AI như RAG và chatbot thông minh.'
 pubDate: 2026-06-28
+updatedDate: 2026-07-09
 category: 'cong-nghe'
 lang: 'vi'
+cover: '/images/posts/hero-vector-db.webp'
+faq:
+  - q: 'Vector database có thay thế database truyền thống không?'
+    a: 'Không. Chúng bổ sung cho nhau. Database truyền thống lưu dữ liệu có cấu trúc, vector database phục vụ tìm kiếm ngữ nghĩa.'
+  - q: 'Tôi cần vector database khi nào?'
+    a: 'Khi xây RAG, chatbot dựa trên tài liệu, hoặc bất kỳ tính năng tìm kiếm theo ý nghĩa thay vì từ khóa.'
+  - q: 'Dự án nhỏ có cần vector database riêng không?'
+    a: 'Không nhất thiết. Với ít dữ liệu, thư viện như FAISS hoặc lưu vector trong file là đủ. Quy mô lớn mới cần giải pháp chuyên dụng.'
+  - q: 'Embedding tiếng Việt có chính xác không?'
+    a: 'Có, nếu chọn mô hình embedding hỗ trợ tiếng Việt tốt. Chất lượng embedding quyết định độ chính xác của tìm kiếm.'
 ---
+
+**Tóm tắt nhanh:** Vector database là cơ sở dữ liệu chuyên **lưu trữ và tìm kiếm vector nhúng (embedding)** — biểu diễn số học của văn bản, ảnh, âm thanh. Thay vì khớp từ khóa chính xác, nó tìm theo **ý nghĩa** (semantic search). Đây là nền tảng cốt lõi cho RAG, chatbot và các hệ thống tìm kiếm AI hiện đại.
 
 **Vector database** là loại cơ sở dữ liệu chuyên lưu trữ và tìm kiếm các vector nhúng (embedding) — biểu diễn số học của văn bản, hình ảnh hay âm thanh. Thay vì tìm theo từ khóa chính xác, nó tìm theo **ý nghĩa**, là nền tảng cốt lõi cho RAG, chatbot và các hệ thống tìm kiếm AI hiện đại.
 
@@ -18,6 +31,8 @@ Máy tính không hiểu ngôn ngữ trực tiếp. Nhờ mô hình embedding, m
 - **Tìm ngữ nghĩa (semantic):** hiểu "ô tô" và "xe hơi" gần nghĩa, trả về cả hai.
 
 Đây là lý do vector database mạnh hơn hẳn tìm kiếm truyền thống với các câu hỏi tự nhiên.
+
+![Minh họa vector database lưu và tìm kiếm dữ liệu theo độ tương đồng ngữ nghĩa](/images/posts/in-vector-db.webp)
 
 ## Vector database hoạt động như thế nào?
 
@@ -46,6 +61,14 @@ Vector database đứng sau nhiều sản phẩm AI:
 - **Qdrant, Weaviate, Milvus:** mã nguồn mở, mạnh mẽ.
 - **Pinecone:** dịch vụ đám mây, dễ dùng.
 - **FAISS:** thư viện của Meta, phù hợp dự án nhỏ và thử nghiệm.
+
+## Những điều cốt lõi
+
+- Vector database lưu **embedding** và tìm theo **ý nghĩa**, không phải từ khóa chính xác.
+- Tìm ngữ nghĩa hiểu "ô tô" ≈ "xe hơi" — mạnh hơn hẳn tìm từ khóa.
+- Quy trình: **tạo embedding → lập chỉ mục (HNSW) → truy vấn top-k → trả kết quả**.
+- Đo tương đồng bằng **cosine similarity** hoặc khoảng cách Euclid.
+- Ứng dụng: **RAG, chatbot, gợi ý, tìm ảnh/âm thanh**. Công cụ: Qdrant, Weaviate, Pinecone, FAISS.
 
 ## Câu hỏi thường gặp (FAQ)
 
