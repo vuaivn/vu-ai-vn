@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '@/i18n/ui';
+import { categories as cats } from '@/config';
+import { formatDate } from '@/utils';
+
+interface Props { category?: string }
+const { category } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const base = lang === 'en' ? '/en' : '';
+const catList = cats[lang];
+
+let posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+if (category) posts = posts.filter((p) => p.data.category === category);
+
+function catName(slug: string) {
+  return catList.find((c) => c.slug === slug)?.name ?? slug;
+}
+---
+<section class="section container">
+  <div class="section-head">
+    <div class="eyebrow">Blog</div>
+    <h2>{t('blog.title')}</h2>
+    <p>{t('blog.subtitle')}</p>
+  </div>
+
+  <div class="filter">
+    <a href={`${base}/blog`} class={!category ? 'active' : ''}>{t('blog.all')}</a>
+    {catList.map((c) => (
+      <a href={`${base}/blog/category/${c.slug}`} class={category === c.slug ? 'active' : ''}>{c.name}</a>
+    ))}
+  </div>
+
+  <div>
+    {posts.map((post) => (
+      <a class="post-item" href={`${base}/blog/${post.slug}`}>
+        <div>
+          <div class="meta">{catName(post.data.category)}</div>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.description}</p>
+        </div>
+        <div class="date">{formatDate(post.data.pubDate, lang)}</div>
+      </a>
+    ))}
+  </div>
+</section>

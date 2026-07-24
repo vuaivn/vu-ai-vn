@@ -1,0 +1,13 @@
+---
+import { getLangFromUrl, useTranslations } from '@/i18n/ui';
+import { site } from '@/config';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© {year} {site.name} — {t('footer.rights')}</div>
+    <div>{t('footer.built')}</div>
+  </div>
+</footer>

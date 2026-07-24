@@ -1,0 +1,13 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogBody from '@/components/BlogBody.astro';
+import { categories as cats } from '@/config';
+
+export async function getStaticPaths() {
+  return cats.en.map((c) => ({ params: { cat: c.slug } }));
+}
+const { cat } = Astro.params;
+---
+<BaseLayout title="Blog">
+  <BlogBody category={cat} />
+</BaseLayout>
