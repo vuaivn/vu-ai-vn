@@ -49,11 +49,24 @@ async function verify(slug) {
   }
 }
 
+async function logToSheet(slug) {
+  if (!slug) return;
+  try {
+    execSync(
+      `node ../.webhooks/post-to-sheet.mjs ${DOMAIN} ${slug} src/content/blog/${slug}.md`,
+      { stdio: 'inherit', cwd: ROOT }
+    );
+  } catch (e) {
+    console.log('⚠️ Sheet logging skipped:', e.message);
+  }
+}
+
 (async () => {
   console.log(`=== ${DOMAIN} deploy ===`);
   loadEnv();
   run('npm run build');
   run(`npx wrangler pages deploy dist --project-name=${PROJECT} --branch=main --commit-dirty=true`);
   await verify(slug);
+  await logToSheet(slug);
   console.log('\n=== deploy done ===');
 })().catch(e => { console.error('DEPLOY FAILED:', e.message); process.exit(1); });
