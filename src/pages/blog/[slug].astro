@@ -41,7 +41,7 @@ const share = {
   telegram: `https://t.me/share/url?url=${shareUrl}&text=${shareText}`,
 };
 ---
-<BaseLayout title={data.title} description={data.description} type="article">
+<BaseLayout title={data.title} description={data.description} image={data.cover} type="article">
   <article class="article container">
     <a href="/blog" class="back-link">← {lang === 'en' ? 'Back to Blog' : 'Quay lại Blog'}</a>
     <div class="meta" style="color:var(--accent2);font-size:0.85rem;">{catName}</div>
@@ -49,6 +49,9 @@ const share = {
     <div class="article-meta">
       {formatDate(data.pubDate, lang)} · {mins} {t('blog.readingTime')}
     </div>
+    {data.cover && (
+      <img class="article-hero" src={data.cover} alt={data.title} width="1200" height="675" loading="eager" decoding="async" />
+    )}
     <div class="prose">
       <Content />
     </div>
@@ -111,4 +114,6 @@ const share = {
   .related-body { padding: 0.9rem 1rem 1.1rem; }
   .related-cat { font-size: 0.8rem; color: var(--accent2, #6d28d9); font-weight: 600; }
   .related-body h3 { font-size: 1rem; margin: 0.3rem 0 0; line-height: 1.4; }
+</style>
+ margin: 0.3rem 0 0; line-height: 1.4; }
 </style>
