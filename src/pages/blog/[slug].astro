@@ -50,7 +50,7 @@ const share = {
       {formatDate(data.pubDate, lang)} · {mins} {t('blog.readingTime')}
     </div>
     {data.cover && (
-      <img class="article-hero" src={data.cover} alt={data.title} width="1200" height="675" loading="eager" decoding="async" />
+      <img class="article-hero" src={data.cover} alt={data.title} width="1200" height="675" loading="eager" decoding="async" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;margin:1.2rem 0 1.8rem;display:block;border:1px solid var(--border,#e5e5e5);" />
     )}
     <div class="prose">
       <Content />
@@ -119,6 +119,4 @@ const share = {
   .related-body { padding: 0.9rem 1rem 1.1rem; }
   .related-cat { font-size: 0.8rem; color: var(--accent2, #6d28d9); font-weight: 600; }
   .related-body h3 { font-size: 1rem; margin: 0.3rem 0 0; line-height: 1.4; }
-</style>
- margin: 0.3rem 0 0; line-height: 1.4; }
 </style>
