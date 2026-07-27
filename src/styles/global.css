@@ -147,6 +147,21 @@ img { max-width: 100%; display: block; }
   .post-item .post-thumb { width: 104px; height: 58px; }
 }
 
+/* Related articles cards (styles here so Astro cannot prune them from the conditional block) */
+.related { margin-top: 3rem; }
+.related h2 { margin-bottom: 1.2rem; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+.related-card {
+  display: block; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.35); }
+.related-img { width: 100%; height: auto; display: block; }
+.related-body { padding: 0.9rem 1rem 1.1rem; }
+.related-cat { font-size: 0.8rem; color: var(--accent2); font-weight: 600; }
+.related-body h3 { font-size: 1rem; margin: 0.3rem 0 0; line-height: 1.4; color: var(--text); }
+
 .filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
 .filter a {
   font-size: 0.88rem; color: var(--text-dim);
