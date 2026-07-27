@@ -4,6 +4,7 @@ description: "Ba trợ lý AI hàng đầu — Claude, ChatGPT và Gemini — m�
 pubDate: 2026-07-11
 category: "review"
 lang: "vi"
+cover: /images/posts/hero-review-claude-gpt-gemini-v2.webp
 ---
 
 

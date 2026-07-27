@@ -4,6 +4,7 @@ description: 'Tổng quan dễ hiểu về AI Agent — cách chúng hoạt đ�
 pubDate: 2026-07-07
 category: 'cong-nghe'
 lang: 'vi'
+cover: /images/posts/hero-ai-agent-la-gi.webp
 ---
 
 **AI Agent** là một hệ thống trí tuệ nhân tạo có khả năng tự lập kế hoạch, sử dụng công cụ và thực hiện hành động để hoàn thành mục tiêu — thay vì chỉ trả lời câu hỏi.

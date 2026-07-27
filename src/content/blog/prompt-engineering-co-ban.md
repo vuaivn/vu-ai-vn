@@ -4,6 +4,7 @@ description: "Cùng một câu hỏi, cách bạn diễn đạt quyết định 
 pubDate: 2026-07-11
 category: "cong-nghe"
 lang: "vi"
+cover: /images/posts/hero-prompt-engineering-co-ban.webp
 ---
 
 

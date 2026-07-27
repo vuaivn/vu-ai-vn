@@ -4,6 +4,7 @@ description: "Hướng dẫn dễ hiểu về chạy mô hình ngôn ngữ lớn
 pubDate: 2026-07-11
 category: "cong-nghe"
 lang: "vi"
+cover: /images/posts/hero-chay-llm-local.webp
 ---
 
 

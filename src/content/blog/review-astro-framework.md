@@ -4,6 +4,7 @@ description: 'Trải nghiệm thực tế khi dùng Astro để xây website —
 pubDate: 2026-07-06
 category: 'review'
 lang: 'vi'
+cover: /images/posts/hero-review-astro-framework.webp
 ---
 
 Sau khi thử nhiều framework, tôi chọn **Astro** để xây chính website này. Đây là lý do.

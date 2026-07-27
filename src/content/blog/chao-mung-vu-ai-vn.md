@@ -4,6 +4,7 @@ description: 'Giới thiệu về hành trình công nghệ, AI và mục tiêu 
 pubDate: 2026-07-08
 category: 'phat-trien-ban-than'
 lang: 'vi'
+cover: /images/posts/hero-chao-mung-vu-ai-vn.webp
 ---
 
 Đây là bài viết đầu tiên trên **vu.ai.vn** — nơi tôi chia sẻ hành trình khám phá công nghệ, trí tuệ nhân tạo và phát triển bản thân.
