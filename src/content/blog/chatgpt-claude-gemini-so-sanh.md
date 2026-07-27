@@ -5,7 +5,7 @@ pubDate: 2026-07-24
 category: review
 lang: vi
 cover: /images/posts/hero-chatgpt-claude-gemini-so-sanh.webp
-draft: true
+draft: false
 ---
 
 **ChatGPT** dẫn đầu về độ phổ biến và plugin đa dạng. **Claude** vượt trội trong xử lý văn bản dài, lập trình phức tạp và hiểu ngữ cảnh sâu. **Gemini** tích hợp mạnh với hệ sinh thái Google và xử lý đa phương thức tốt. Nếu cần làm việc với tiếng Việt chuyên sâu và code phức tạp, chọn Claude. Nếu muốn tích hợp công cụ Google và miễn phí, chọn Gemini. Nếu cần hệ sinh thái plugin rộng, chọn ChatGPT.
