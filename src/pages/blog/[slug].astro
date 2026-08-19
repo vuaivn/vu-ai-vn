@@ -40,8 +40,44 @@ const share = {
   x: `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`,
   telegram: `https://t.me/share/url?url=${shareUrl}&text=${shareText}`,
 };
+
+// JSON-LD: Article + BreadcrumbList (structured data cho AEO/GEO)
+const coverAbs = data.cover ? new URL(data.cover, site.url).href : undefined;
+const homeUrl = new URL(lang === 'en' ? '/en/' : '/', site.url).href;
+const blogUrl = new URL(lang === 'en' ? '/en/blog/' : '/blog/', site.url).href;
+const catUrl = new URL(`${lang === 'en' ? '/en' : ''}/blog/category/${data.category}/`, site.url).href;
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: data.title,
+    description: data.description,
+    ...(coverAbs ? { image: coverAbs } : {}),
+    datePublished: new Date(data.pubDate).toISOString(),
+    dateModified: new Date(data.updatedDate ?? data.pubDate).toISOString(),
+    inLanguage: lang,
+    author: { '@type': 'Person', name: 'Nguyễn Ngọc Vũ', url: site.url },
+    publisher: {
+      '@type': 'Organization',
+      name: site.name,
+      logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.url).href },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    articleSection: catName,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: lang === 'en' ? 'Home' : 'Trang chủ', item: homeUrl },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: blogUrl },
+      { '@type': 'ListItem', position: 3, name: catName, item: catUrl },
+      { '@type': 'ListItem', position: 4, name: data.title, item: url },
+    ],
+  },
+];
 ---
-<BaseLayout title={data.title} description={data.description} image={data.cover} type="article">
+<BaseLayout title={data.title} description={data.description} image={data.cover} type="article" jsonld={jsonld}>
   <article class="article container">
     <a href="/blog" class="back-link">← {lang === 'en' ? 'Back to Blog' : 'Quay lại Blog'}</a>
     <div class="meta" style="color:var(--accent2);font-size:0.85rem;">{catName}</div>

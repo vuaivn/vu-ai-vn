@@ -10,8 +10,9 @@ interface Props {
   description?: string;
   image?: string;
   type?: string;
+  jsonld?: object[];
 }
-const { title, description, image = '/og-default.png', type = 'website' } = Astro.props;
+const { title, description, image = '/og-default.png', type = 'website', jsonld = [] } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const fullTitle = title ? `${title} · ${site.name}` : `${site.name} — ${site.domain}`;
 const desc =
@@ -61,6 +62,9 @@ const ogImage = new URL(image, site.url).href;
       email: site.email,
       sameAs: Object.values(site.social),
     })} />
+    {jsonld.map((obj) => (
+      <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+    ))}
   </head>
   <body>
     <Header />

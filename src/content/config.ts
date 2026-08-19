@@ -6,6 +6,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
+    updatedDate: z.coerce.date().optional(),
     category: z.enum(['phat-trien-ban-than', 'cong-nghe', 'review']),
     lang: z.enum(['vi', 'en']).default('vi'),
     cover: z.string().optional(),
