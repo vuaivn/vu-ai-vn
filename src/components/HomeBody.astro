@@ -48,7 +48,7 @@ const tiles = [
   </div>
   <div>
     {posts.map((post) => (
-      <a class="post-item" href={`${base}/blog/${post.slug}`}>
+      <a class="post-item" href={`${base}/blog/${post.slug}/`}>
         {post.data.cover && <img class="post-thumb" src={post.data.cover} alt={post.data.title} width="132" height="74" loading="lazy" decoding="async" />}
         <div class="pi-text">
           <h3>{post.data.title}</h3>

@@ -30,7 +30,7 @@ Không hẳn. Cửa sổ lớn giúp ôm nhiều thông tin, nhưng:
 - **Tốn chi phí và chậm hơn** — càng nhiều token, càng tốn tính toán.
 - **Nhiễu thông tin** — nhồi quá nhiều thứ không liên quan khiến AI kém tập trung.
 
-Đây chính là lý do các kỹ thuật như **RAG** ra đời: thay vì nhồi tất cả vào cửa sổ, ta chỉ đưa vào những đoạn thật sự liên quan. Đối với AI agent, việc quản lý khéo context window còn quan trọng hơn — liên quan mật thiết đến cách [AI agent](/blog/ai-agent-la-gi) và [MCP](/blog/mcp-la-gi) chọn lọc thông tin để đưa cho mô hình.
+Đây chính là lý do các kỹ thuật như **RAG** ra đời: thay vì nhồi tất cả vào cửa sổ, ta chỉ đưa vào những đoạn thật sự liên quan. Đối với AI agent, việc quản lý khéo context window còn quan trọng hơn — liên quan mật thiết đến cách [AI agent](/blog/ai-agent-la-gi/) và [MCP](/blog/mcp-la-gi/) chọn lọc thông tin để đưa cho mô hình.
 
 ## Mẹo dùng context window hiệu quả
 
@@ -41,4 +41,4 @@ Không hẳn. Cửa sổ lớn giúp ôm nhiều thông tin, nhưng:
 
 ## Kết
 
-Hiểu context window giúp bạn dùng AI thông minh hơn: biết vì sao AI đôi khi "quên", vì sao tài liệu quá dài bị cắt, và cách sắp xếp thông tin để nhận câu trả lời tốt nhất. Đây là một trong những khái niệm nền tảng nhất khi làm việc với AI hiện đại. Muốn đi tiếp, đọc thêm [MCP là gì](/blog/mcp-la-gi) và [AI Agent là gì](/blog/ai-agent-la-gi).
+Hiểu context window giúp bạn dùng AI thông minh hơn: biết vì sao AI đôi khi "quên", vì sao tài liệu quá dài bị cắt, và cách sắp xếp thông tin để nhận câu trả lời tốt nhất. Đây là một trong những khái niệm nền tảng nhất khi làm việc với AI hiện đại. Muốn đi tiếp, đọc thêm [MCP là gì](/blog/mcp-la-gi/) và [AI Agent là gì](/blog/ai-agent-la-gi/).

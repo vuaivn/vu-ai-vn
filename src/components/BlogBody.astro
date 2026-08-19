@@ -30,13 +30,13 @@ function catName(slug: string) {
   <div class="filter">
     <a href={`${base}/blog`} class={!category ? 'active' : ''}>{t('blog.all')}</a>
     {catList.map((c) => (
-      <a href={`${base}/blog/category/${c.slug}`} class={category === c.slug ? 'active' : ''}>{c.name}</a>
+      <a href={`${base}/blog/category/${c.slug}/`} class={category === c.slug ? 'active' : ''}>{c.name}</a>
     ))}
   </div>
 
   <div>
     {posts.map((post) => (
-      <a class="post-item" href={`${base}/blog/${post.slug}`}>
+      <a class="post-item" href={`${base}/blog/${post.slug}/`}>
         {post.data.cover && <img class="post-thumb" src={post.data.cover} alt={post.data.title} width="132" height="74" loading="lazy" decoding="async" />}
         <div class="pi-text">
           <div class="meta">{catName(post.data.category)}</div>

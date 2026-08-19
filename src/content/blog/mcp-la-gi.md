@@ -22,7 +22,7 @@ MCP đưa ra **một chuẩn giao tiếp duy nhất**. Công cụ chỉ cần "n
 MCP theo mô hình **client–server**:
 
 - **MCP Server** — bọc một nguồn lực bên ngoài (hệ thống file, database, API, ứng dụng) và phơi ra các khả năng theo chuẩn MCP.
-- **MCP Client** — nằm trong ứng dụng AI (như một trợ lý hay [AI agent](/blog/ai-agent-la-gi)), kết nối tới server để dùng các khả năng đó.
+- **MCP Client** — nằm trong ứng dụng AI (như một trợ lý hay [AI agent](/blog/ai-agent-la-gi/)), kết nối tới server để dùng các khả năng đó.
 
 Server cung cấp ba thứ chính:
 
@@ -41,7 +41,7 @@ Giả sử tôi muốn trợ lý AI của mình đọc được lịch làm vi�
 - **Chuẩn mở** — không khóa vào một hãng nào; nhiều công ty AI lớn đã hỗ trợ.
 - **Tái sử dụng** — viết một MCP server, mọi AI tương thích đều dùng được.
 - **An toàn hơn** — quyền truy cập được kiểm soát rõ ràng qua server, thay vì nhét khóa API lung tung.
-- **Mở đường cho agent** — đây là mảnh ghép giúp [AI agent](/blog/ai-agent-la-gi) thực sự "làm việc" với thế giới thật.
+- **Mở đường cho agent** — đây là mảnh ghép giúp [AI agent](/blog/ai-agent-la-gi/) thực sự "làm việc" với thế giới thật.
 
 ## Người mới nên bắt đầu từ đâu?
 

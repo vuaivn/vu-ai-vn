@@ -3,9 +3,9 @@ import { getCollection } from 'astro:content';
 const STATIC = [
   '/', '/blog', '/tools', '/contact',
   '/en', '/en/blog', '/en/tools', '/en/contact',
-  '/blog/category/phat-trien-ban-than',
-  '/blog/category/cong-nghe',
-  '/blog/category/review',
+  '/blog/category/phat-trien-ban-than/',
+  '/blog/category/cong-nghe/',
+  '/blog/category/review/',
 ];
 
 export async function GET(context) {
@@ -14,7 +14,7 @@ export async function GET(context) {
   const urls = [
     ...STATIC.map((u) => ({ loc: base + u, lastmod: null })),
     ...posts.map((p) => ({
-      loc: `${base}/blog/${p.slug}`,
+      loc: `${base}/blog/${p.slug}/`,
       lastmod: p.data.pubDate.toISOString(),
     })),
   ];
