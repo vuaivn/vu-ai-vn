@@ -1,8 +1,8 @@
 import { getCollection } from 'astro:content';
 
 const STATIC = [
-  '/', '/blog', '/tools', '/contact',
-  '/en', '/en/blog', '/en/tools', '/en/contact',
+  '/', '/blog/', '/tools/', '/contact/',
+  '/en/', '/en/blog/', '/en/tools/', '/en/contact/',
   '/blog/category/phat-trien-ban-than/',
   '/blog/category/cong-nghe/',
   '/blog/category/review/',
