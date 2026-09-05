@@ -4,7 +4,7 @@ description: "Constitutional AI (CAI) giúp AI tự học cách trả lời an t
 pubDate: 2026-09-02
 category: cong-nghe
 lang: vi
-cover: /images/posts/hero-constitutional-ai-huan-luyen-ai-dao-duc.webp
+cover: /images/posts/hero-constitutional-ai-huan-luyen-ai-dao-duc-v2.webp
 draft: false
 ---
 

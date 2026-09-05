@@ -4,7 +4,7 @@ description: "AI Alignment đảm bảo AI hoạt động đúng mục tiêu con
 pubDate: 2026-09-04
 category: cong-nghe
 lang: vi
-cover: /images/posts/hero-ai-alignment-can-chinh-ai-theo-gia-tri-con-nguoi.webp
+cover: /images/posts/hero-ai-alignment-can-chinh-ai-theo-gia-tri-con-nguoi-v2.webp
 draft: false
 ---
 

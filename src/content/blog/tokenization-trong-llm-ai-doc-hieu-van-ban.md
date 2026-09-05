@@ -4,7 +4,7 @@ description: "Khám phá cách LLM chia nhỏ văn bản thành token, tại sao
 pubDate: 2026-09-03
 category: "cong-nghe"
 lang: "vi"
-cover: "/images/posts/hero-tokenization-trong-llm-ai-doc-hieu-van-ban.webp"
+cover: "/images/posts/hero-tokenization-trong-llm-ai-doc-hieu-van-ban-v2.webp"
 draft: true
 ---
 

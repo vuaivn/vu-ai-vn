@@ -4,7 +4,7 @@ description: "Hướng dẫn đọc hiểu các chỉ số benchmark MMLU, Human
 pubDate: 2026-08-30T20:00:00.000Z
 category: cong-nghe
 lang: vi
-cover: /images/posts/hero-ai-model-benchmarks-do-chat-luong-llm.webp
+cover: /images/posts/hero-ai-model-benchmarks-do-chat-luong-llm-v2.webp
 draft: false
 ---
 

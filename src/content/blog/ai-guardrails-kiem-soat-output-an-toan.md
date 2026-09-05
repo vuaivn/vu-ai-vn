@@ -4,7 +4,7 @@ description: "Hệ thống guardrails giúp kiểm soát output AI, ngăn halluc
 pubDate: 2026-09-01
 category: "cong-nghe"
 lang: "vi"
-cover: "/images/posts/hero-ai-guardrails-kiem-soat-output-an-toan.webp"
+cover: "/images/posts/hero-ai-guardrails-kiem-soat-output-an-toan-v2.webp"
 draft: false
 ---
 

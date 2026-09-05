@@ -4,7 +4,7 @@ description: "Hướng dẫn triển khai RAG nâng cao với chunking thông mi
 pubDate: 2026-08-31
 category: "cong-nghe"
 lang: "vi"
-cover: "/images/posts/hero-rag-nang-cao-xay-dung-he-thong-qa-thong-minh.webp"
+cover: "/images/posts/hero-rag-nang-cao-xay-dung-he-thong-qa-thong-minh-v2.webp"
 draft: false
 ---
 
