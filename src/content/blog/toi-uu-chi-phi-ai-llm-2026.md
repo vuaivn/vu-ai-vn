@@ -5,7 +5,7 @@ pubDate: 2026-09-18
 category: cong-nghe
 lang: vi
 cover: /images/posts/hero-toi-uu-chi-phi-ai-llm-2026.webp
-draft: true
+draft: false
 ---
 
 **Chi phí API LLM có thể chiếm 40-70% ngân sách vận hành ứng dụng AI. Tin tốt: bạn có thể cắt giảm 50-90% bằng 8 chiến lược đã được chứng minh — từ semantic caching, quantization, đến router thông minh — mà vẫn giữ nguyên chất lượng. Bài này phân tích từng phương pháp kèm số liệu thực tế.**
